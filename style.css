@@ -1,0 +1,1131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #100713;
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   BACKGROUND
+============================== */
+
+.glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.glow-one {
+    width: 500px;
+    height: 500px;
+    top: -250px;
+    left: -180px;
+    background: rgba(255, 42, 130, 0.22);
+}
+
+
+.glow-two {
+    width: 450px;
+    height: 450px;
+    right: -180px;
+    bottom: -180px;
+    background: rgba(142, 67, 255, 0.15);
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+
+    background: rgba(16, 7, 19, 0.65);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.04);
+}
+
+
+.logo {
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+
+.logo span {
+    color: #ff559d;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav-links a {
+    color: #a99baa;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #ff6bad;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 20px 70px;
+
+    position: relative;
+}
+
+
+.hero-inner {
+    max-width: 850px;
+}
+
+
+.heart-wrapper {
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 80, 150, 0.18),
+            transparent 70%
+        );
+
+    border:
+        1px solid rgba(255, 110, 175, 0.25);
+
+    animation: breathing 2.5s infinite;
+}
+
+
+.heart {
+    color: #ff4c96;
+
+    font-size: 65px;
+
+    text-shadow:
+        0 0 25px rgba(255, 60, 140, 0.7);
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+.eyebrow,
+.section-label {
+    color: #ff71ad;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 10vw, 105px);
+
+    line-height: 0.92;
+
+    letter-spacing: -4px;
+
+    margin: 22px 0;
+}
+
+
+.hero h1 span {
+    color: #ff69a9;
+}
+
+
+.hero-description {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #aaa0ad;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.anniversary-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding: 9px 18px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid rgba(255, 100, 170, 0.22);
+
+    background:
+        rgba(255, 70, 140, 0.06);
+
+    color: #d8c6d5;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.anniversary-badge span {
+    color: #ff579e;
+}
+
+
+.date-big {
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    margin-top: 22px;
+
+    color: #ffffff;
+
+    letter-spacing: 5px;
+}
+
+
+.date-big small {
+    color: #ff5da1;
+}
+
+
+.date-text {
+    color: #77707b;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+.memory-btn,
+.open-letter {
+    margin-top: 32px;
+
+    padding: 16px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            110deg,
+            #ff398d,
+            #ff70ae
+        );
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 40px rgba(255, 50, 140, 0.3);
+
+    transition: 0.3s;
+}
+
+
+.memory-btn:hover,
+.open-letter:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 50px rgba(255, 50, 140, 0.45);
+}
+
+
+.scroll {
+    position: absolute;
+
+    bottom: 25px;
+
+    color: #655c68;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.scroll span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #ff5d9f;
+}
+
+
+/* ==============================
+   COUNTDOWN
+============================== */
+
+.countdown-section {
+    padding: 130px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(255, 70, 145, 0.035)
+        );
+}
+
+
+.countdown-section h2,
+.heading h2,
+.memories-section h2,
+.letter-container h2,
+.final-section h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 6vw, 68px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+
+.countdown-section h2 span,
+.heading h2 span,
+.memories-section h2 span,
+.letter-container h2 span,
+.final-section h2 span {
+    color: #ff67a7;
+}
+
+
+.section-description {
+    color: #817684;
+
+    font-size: 14px;
+}
+
+
+.countdown {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 50px;
+
+    gap: 14px;
+}
+
+
+.time-box {
+    min-width: 130px;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+}
+
+
+.time-box div {
+    color: #ff70ab;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+}
+
+
+.time-box span {
+    color: #69616c;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.colon {
+    color: #ff579e;
+
+    font-size: 30px;
+}
+
+
+.anniversary-card {
+    max-width: 500px;
+
+    margin: 55px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: left;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 75, 145, 0.055);
+
+    border:
+        1px solid rgba(255, 100, 170, 0.12);
+}
+
+
+.calendar-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background: rgba(255, 75, 145, 0.12);
+
+    color: #ff599e;
+
+    font-size: 25px;
+}
+
+
+.anniversary-card p {
+    color: #ff6ba8;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.anniversary-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin: 5px 0;
+}
+
+
+.anniversary-card span {
+    color: #766b79;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   STORY
+============================== */
+
+.story-section {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 140px 7%;
+}
+
+
+.heading {
+    margin-bottom: 70px;
+}
+
+
+.heading > p:last-child {
+    max-width: 550px;
+
+    color: #807582;
+
+    line-height: 1.8;
+}
+
+
+.timeline {
+    position: relative;
+}
+
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 29px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            #ff559c,
+            rgba(255,255,255,0.05)
+        );
+}
+
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 55px;
+}
+
+
+.timeline-dot {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #190d1d;
+
+    border:
+        1px solid rgba(255, 80, 150, 0.3);
+
+    color: #ff5d9f;
+
+    font-size: 11px;
+
+    z-index: 2;
+}
+
+
+.timeline-content span {
+    color: #ff68a8;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.timeline-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    margin: 10px 0;
+}
+
+
+.timeline-content p {
+    max-width: 600px;
+
+    color: #827783;
+
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   MEMORIES
+============================== */
+
+.memories-section {
+    padding: 140px 7%;
+
+    text-align: center;
+}
+
+
+.memory-grid {
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.memory-card {
+    text-align: left;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    transition: 0.4s;
+}
+
+
+.memory-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(255, 90, 155, 0.2);
+}
+
+
+.icon {
+    font-size: 30px;
+
+    margin-bottom: 22px;
+}
+
+
+.memory-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+
+.memory-card p {
+    color: #827783;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   LETTER
+============================== */
+
+.letter-section {
+    padding: 130px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.letter-container {
+    max-width: 750px;
+
+    padding: 80px 45px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 65, 145, 0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.envelope {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+}
+
+
+.letter-container > p:not(.section-label) {
+    color: #817582;
+
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   MODAL
+============================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(5, 2, 8, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 1000;
+}
+
+
+.modal.active {
+    display: flex;
+}
+
+
+.letter {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2a172d,
+            #180c1c
+        );
+
+    border:
+        1px solid rgba(255, 100, 170, 0.15);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.7);
+
+    animation: popup 0.45s ease;
+}
+
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: #b7a8b8;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+.letter-top {
+    color: #ff5c9f;
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+.letter-label {
+    color: #ff65a6;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+.letter h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin: 15px 0;
+}
+
+
+.line {
+    width: 60px;
+    height: 2px;
+
+    background: #ff5a9e;
+
+    margin-bottom: 30px;
+}
+
+
+.letter > p {
+    color: #b3a6b6;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+.highlight {
+    color: #ff8dbb !important;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+}
+
+
+.signature {
+    margin-top: 35px;
+
+    text-align: right;
+
+    color: #ff67a8;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   FINAL
+============================== */
+
+.final-section {
+    min-height: 75vh;
+
+    padding: 120px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.final-heart {
+    color: #ff579d;
+
+    font-size: 75px;
+
+    margin-bottom: 25px;
+
+    animation: heartbeat 1.4s infinite;
+}
+
+
+.final-text {
+    color: #817481;
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+}
+
+
+.final-line {
+    margin-top: 40px;
+
+    color: #655b68;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #514953;
+
+    font-size: 11px;
+}
+
+
+/* ==============================
+   FLOATING HEARTS
+============================== */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    color: #ff579d;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: floatUp linear forwards;
+}
+
+
+/* ==============================
+   ANIMATIONS
+============================== */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+
+@keyframes breathing {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes floatUp {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+
+    .date-big {
+        font-size: 40px;
+    }
+
+
+    .countdown {
+        gap: 5px;
+    }
+
+
+    .time-box {
+        min-width: 70px;
+
+        padding: 18px 8px;
+    }
+
+
+    .time-box div {
+        font-size: 27px;
+    }
+
+
+    .colon {
+        font-size: 20px;
+    }
+
+
+    .anniversary-card {
+        text-align: left;
+    }
+
+
+    .story-section,
+    .memories-section {
+        padding: 100px 7%;
+    }
+
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .timeline-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 20px;
+    }
+
+
+    .timeline-dot {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .timeline::before {
+        left: 24px;
+    }
+
+
+    .letter {
+        padding: 40px 25px;
+    }
+
+
+    .letter h2 {
+        font-size: 30px;
+    }
+
+}
+
